@@ -1,3 +1,0 @@
-/cygdrive/c/Users/21592/CLionProjects/data-structure-and-algorithms/cmake-build-debug/CMakeFiles/data_structure_and_algorithms.dir
-/cygdrive/c/Users/21592/CLionProjects/data-structure-and-algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/21592/CLionProjects/data-structure-and-algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
