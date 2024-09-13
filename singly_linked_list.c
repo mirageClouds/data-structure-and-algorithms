@@ -1,4 +1,4 @@
-//
+/*//
 // Created by MirageCloud on 2024/9/13.
 //
 
@@ -115,4 +115,4 @@ int main(void) {
     printList(&head);
     printf("%d", findList(&head, 100));
     printf("%d", sizeList(&head));
-}
+}*/
