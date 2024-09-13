@@ -1,10 +1,11 @@
+/*
 //
 // Created by MirageCloud on 2024/9/13.
 //
 #include <stdio.h>
 #include <stdlib.h>
 
-/**顺序表*/
+/**顺序表#1#
 //给int类型设置别名E
 typedef int E;
 
@@ -120,4 +121,5 @@ int main(void) {
         printf("%d",findList(&list, 50));
     } else { printf("Error"); }
 }
+*/
 
