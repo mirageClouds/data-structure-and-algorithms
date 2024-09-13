@@ -1,23 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1*/
+// //初始化search函数
 // int search(int *arr, int i, int target);
 //
 // int main(void) {
-//     int sum = 0;
-//     for (int i = 0; i <= 100; ++i) {
-//         sum += i;
-//     }
-//
-//     printf("sum = %d\n", sum);
-//     printf("sum = %d\n", (1 + 100) * 100 / 2);
-//
 //     int arr[] = {1}, target = 3;
 //     printf("target = %d\n", search(arr, 10, target));
 //     return 0;
 // }
 //
-// // 二分查询
+// //递归解法
 // int binarySearch(int *arr, int target, int left, int right) {
 //     if (left > right) return -1;
 //     int mid = (left + right) / 2;
@@ -29,16 +23,17 @@
 // }
 //
 // int search(int *nums, int numsSize, int target) {
-//     // const int len = sizeof(nums)/sizeof(nums[0]);
-//     // for (int i = 0; i < len; ++i) {
-//     //     if (nums[i] == target) return i;
-//     //     if (nums[i] > target) return -1;
-//     // }
+//     //直接解法
+//     const int len = sizeof(nums)/sizeof(nums[0]);
+//     for (int i = 0; i < len; ++i) {
+//         if (nums[i] == target) return i;
+//         if (nums[i] > target) return -1;
+//     }
 //
+//     //二分查询解法
 //     int start = 0, end = (int) (numsSize) / 2;
 //     nums[end] < target ? end = numsSize - 1 : end;
 //     if (numsSize == 1) end = numsSize - 1;
-//     // 二分方式
 //     while (start <= end) {
 //         if (nums[start] == target) return start;
 //         if (nums[end] == target) return end;
@@ -46,12 +41,16 @@
 //         end -= 1;
 //     }
 //     return -1;
+//
+//     //递归解法
 //     return binarySearch(nums, target, 0, numsSize - 1);
 // }
 
 
-//顺序表
-typedef int E; //给int类型设置别名
+/**顺序表*/
+
+//给int类型设置别名E
+typedef int E;
 
 //创建构造体
 struct List {
@@ -60,7 +59,8 @@ struct List {
     int capacity;
 };
 
-typedef struct List *ArrayList; //对构造体设置别名
+//对构造体设置别名 ArrayList
+typedef struct List *ArrayList;
 
 // 初始化顺序表
 int initList(const ArrayList list) {
@@ -122,16 +122,46 @@ int deleteList(const ArrayList list, const int index) {
     return 1;
 }
 
+//获取顺序表长度
+int sizeList(const ArrayList list) {
+    //由于我们有构造体中维护有size,说以说直接把size返回回去,如果没有维护size可以使用sizeof()
+    // int len = sizeof(list->array) / sizeof(list->array[0]);
+    return list->size;
+}
+
+//获取指定位置上的元素
+E * getList(const ArrayList list, const int index) {
+    //判断index是否合法
+    if (index < 1 || index > list->size) return NULL;
+    //因为返回的是指针,所以要对构造体中取出来的数据进行取地址操作
+    return &list->array[index - 1];
+}
+
+//查询元素在顺序表中的位置
+int findList(const ArrayList list, const E element) {
+    for (int i = 0; i < list->size; ++i) {
+        // 遍历，若找到了就返回位置
+        if (list->array[i] == element) return i+1;
+    }
+    return -1;
+}
+
+
+
+
 int main(void) {
     struct List list;
     //判断是否成功初始化顺序表
     if (initList(&list)) {
         //成功初始化后的操作
-        for (int i = 0; i < 30; ++i) {
+        for (int i = 0; i <= 30; ++i) {
             insertList(&list, i * 10, i);
         }
-
+        deleteList(&list, 1);
         printList(&list);
+        printf("%d",*getList(&list, 1));
+        printf("%d",sizeList(&list));
+        printf("%d",findList(&list, 50));
     } else { printf("Error"); }
 }
 
