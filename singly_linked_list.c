@@ -104,15 +104,15 @@ int sizeList(Node head) {
 }
 
 
-// int main(void) {
-//     struct ListNode head;
-//     initList(&head);
-//
-//     for(int i = 1; i <= 3; ++i) {
-//         insertList(&head, i*100, i);
-//     }
-//     deleteList(&head, 2);
-//     printList(&head);
-//     printf("%d", findList(&head, 100));
-//     printf("%d", sizeList(&head));
-// }
+int main(void) {
+    struct ListNode head;
+    initList(&head);
+
+    for(int i = 1; i <= 3; ++i) {
+        insertList(&head, i*100, i);
+    }
+    deleteList(&head, 2);
+    printList(&head);
+    printf("%d", findList(&head, 100));
+    printf("%d", sizeList(&head));
+}
