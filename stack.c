@@ -76,7 +76,7 @@ int main(void) {
 }*/
 
 /**链表方式*/
-typedef int E;
+/*typedef int E;
 
 //创建链表
 struct ListNode {
@@ -141,4 +141,4 @@ int main(void) {
         printf("%d ", popStack(&list)); //9 8 7 6 5 4 3 2 1 0
 
     }
-}
+}*/
