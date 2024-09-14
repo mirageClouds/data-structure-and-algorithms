@@ -1,4 +1,4 @@
-//
+/*//
 // Created by MirageCloud on 2024/9/14.
 //
 
@@ -89,4 +89,4 @@ int main(void) {
 
     deleteList(&node, 4);
     printNextList(&node);
-}
+}*/
