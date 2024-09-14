@@ -195,10 +195,10 @@
                 insertList(&list, i * 10, i);
             }
             deleteList(&list, 1);
-            printList(&list);
-            printf("%d",*getList(&list, 1));
-            printf("%d",sizeList(&list));
-            printf("%d",findList(&list, 50));
+       		printList(&list); //20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300
+            printf("%d\n",*getList(&list, 1)); // 20
+            printf("%d\n",sizeList(&list)); //29
+            printf("%d\n",findList(&list, 50)); //4
         } else { printf("Error"); }
     }
     ```
@@ -343,8 +343,9 @@
             insertList(&head, i*100, i);
         }
         deleteList(&head, 2);
-        printList(&head);
-        printf("%d", findList(&head, 100));
+        printList(&head); //当前值为100 当前值为300
+        printf("%d\n", findList(&head, 100)); //1
+        printf("%d\n", sizeList(&head)); //2
     
     }
     ```
@@ -439,9 +440,9 @@
         for (int i = 0; i < 10; i++) {
             insertList(&node, i*100, i);
         }
-    
+     	printNextList(&node); //100 ->200 ->300 ->400 ->500 ->600 ->700 ->800 ->900 ->
         deleteList(&node, 4);
-        printNextList(&node);
+        printNextList(&node); // 100 ->200 ->300 ->500 ->600 ->700 ->800 ->900 ->
     }
     ```
 

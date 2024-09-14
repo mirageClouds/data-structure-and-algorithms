@@ -86,7 +86,7 @@ int main(void) {
     for (int i = 0; i < 10; i++) {
         insertList(&node, i*100, i);
     }
-
+    printNextList(&node); //100 ->200 ->300 ->400 ->500 ->600 ->700 ->800 ->900 ->
     deleteList(&node, 4);
-    printNextList(&node);
+    printNextList(&node); // 100 ->200 ->300 ->500 ->600 ->700 ->800 ->900 ->
 }*/

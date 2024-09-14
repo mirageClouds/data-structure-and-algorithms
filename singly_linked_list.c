@@ -1,4 +1,4 @@
-/*//
+//
 // Created by MirageCloud on 2024/9/13.
 //
 
@@ -47,7 +47,7 @@ _Bool insertList( Node head, const E element, int index) {
 void printList( Node head) {
     while(head->next) {
         head = head->next;
-        printf("当前值为%d", head->element);
+        printf("当前值为%d\n", head->element);
     }
 }
 
@@ -112,7 +112,7 @@ int main(void) {
         insertList(&head, i*100, i);
     }
     deleteList(&head, 2);
-    printList(&head);
-    printf("%d", findList(&head, 100));
-    printf("%d", sizeList(&head));
-}*/
+    printList(&head); //当前值为100 当前值为300
+    printf("%d\n", findList(&head, 100)); //1
+    printf("%d\n", sizeList(&head)); //2
+}
