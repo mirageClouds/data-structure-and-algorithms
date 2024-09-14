@@ -7,4 +7,4 @@ add_executable(data_structure_and_algorithms main.c
         sequenatial_list.c
         singly_linked_list.c
         double_linked_lists.c
-        circylarl-inked-lists.c)
+)
