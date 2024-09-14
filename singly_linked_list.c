@@ -1,4 +1,4 @@
-//
+/*//
 // Created by MirageCloud on 2024/9/13.
 //
 
@@ -115,4 +115,4 @@ int main(void) {
     printList(&head); //当前值为100 当前值为300
     printf("%d\n", findList(&head, 100)); //1
     printf("%d\n", sizeList(&head)); //2
-}
+}*/
