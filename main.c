@@ -184,7 +184,7 @@ bool isValid(char* s) {
 }*/
 
 /**力扣[1539. 第 k 个缺失的正整数](https://leetcode.cn/problems/kth-missing-positive-number/)*/
-int findKthPositive(int* arr, int arrSize, int k) {
+/*int findKthPositive(int* arr, int arrSize, int k) {
     //暴力解法时间为O(n)
     /*int i = 0, j = 1;
     while (i < arrSize) {
@@ -195,7 +195,7 @@ int findKthPositive(int* arr, int arrSize, int k) {
         }
         j++;
     }
-    return j+k-1;*/
+    return j+k-1;#1#
     // 二分搜索
     if(arr[0]>k) return k;
     int left = 0,right = arrSize;
@@ -208,4 +208,4 @@ int findKthPositive(int* arr, int arrSize, int k) {
         }
     }
     return k-(arr[left -1] - (left -1) -1) + arr[left -1];
-}
+}*/
